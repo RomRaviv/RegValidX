@@ -23,6 +23,15 @@ Step 2. Add the dependency
 # Usage
 Make sure each EditText in the layout has the attribute: "android:inputType = {TYPE}" where TYPE is the desired type.
 
+For example:
+
+         <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+
 In the registration activity:
 
 
@@ -31,7 +40,6 @@ In the registration activity:
 		validator.validate();
 		Toast. makeText(getApplicationContext(),"All fields are valid!",Toast. LENGTH_SHORT).show();
     }catch (IllegalArgumentException ex){
-                Toast. makeText(getApplicationContext(),ex.getMessage(),Toast. LENGTH_SHORT).show();
+           Toast. makeText(getApplicationContext(),ex.getMessage(),Toast. LENGTH_SHORT).show();
 	}
 
- 
