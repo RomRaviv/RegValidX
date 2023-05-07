@@ -31,9 +31,11 @@ Step 2. Add the dependency
   
  To use the validator:
  
- ` try{
+ `
+ try{
                 validator.validate();
                 Toast. makeText(getApplicationContext(),"All fields are valid!",Toast. LENGTH_SHORT).show();
             }catch (IllegalArgumentException ex){
                 Toast. makeText(getApplicationContext(),ex.getMessage(),Toast. LENGTH_SHORT).show();
-    }`
+    }
+`
