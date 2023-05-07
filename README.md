@@ -17,7 +17,7 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        implementation 'com.github.RomRaviv:RegValidX:Tag'
+	        implementation 'com.github.RomRaviv:RegValidX:1.00.07'
 	}
   
 # Usage
