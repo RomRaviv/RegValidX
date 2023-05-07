@@ -5,10 +5,7 @@ Works only with EditText Views, scans the views of the activity and checks the E
 # Setup
 Step 1. Add the JitPack repository to your build file
 
-gradle
-maven
-sbt
-leiningen
+
 Add it in your root build.gradle at the end of repositories:
 
 	allprojects {
@@ -23,19 +20,18 @@ Step 2. Add the dependency
 	        implementation 'com.github.RomRaviv:RegValidX:Tag'
 	}
   
-  # Usage
-  
-  Make sure you use this in the registration activity.
-  
-  `ViewsValidator validator = new ViewsValidator(this);`
-  
- To use the validator:
- 
- `
- try{
-                validator.validate();
-                Toast. makeText(getApplicationContext(),"All fields are valid!",Toast. LENGTH_SHORT).show();
-            }catch (IllegalArgumentException ex){
+# Usage
+Make sure each EditText in the layout has the attribute: "android:inputType = {TYPE}" where TYPE is the desired type.
+
+In the registration activity:
+
+
+  	ViewsValidator validator = new ViewsValidator(this); 
+ 	try{
+		validator.validate();
+		Toast. makeText(getApplicationContext(),"All fields are valid!",Toast. LENGTH_SHORT).show();
+    }catch (IllegalArgumentException ex){
                 Toast. makeText(getApplicationContext(),ex.getMessage(),Toast. LENGTH_SHORT).show();
-    }
-`
+	}
+
+ 
